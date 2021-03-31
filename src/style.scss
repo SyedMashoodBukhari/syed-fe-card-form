@@ -1,4 +1,80 @@
+// Import Source Sans from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+//Define font and primary font colour
+$font_stack: 'Source Sans Pro', sans-serif;
+$primary_colour: #1A3B5D;
+
+* {
+    font-family: $font-stack;
+    box-sizing: border-box;
+}
 body {
-    background: red;
-    color: blue;
+    background: #DDEEFC;
+    position: relative;
+}
+
+.card-form {
+    background-color: #FFF;
+    color: $primary-colour;
+    padding: 35px;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    width: 50%;
+    min-width: 500px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+
+    .card-form__label {
+        font-size: 14px;
+        font-weight: 500;
+        color: $primary-colour;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .card-form__input {
+        font-size: 18px;
+        font-weight: 400;
+        color: $primary-colour;
+        border: 1px solid #CED6E0;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+
+        &:hover {
+            border: 1px solid #3D9CFF;
+        }
+        &:focus {
+            box-shadow: 0 10px 20px 13px rgba(32, 56, 117, 0.35);
+            border: none;
+        }
+    }
+
+    .card-form__input--select {
+        font-size: 18px;
+        font-weight: 400;
+        color: $primary-colour;
+        border: 1px solid #CED6E0;
+        border-radius: 5px;
+        padding: 5px 30px 5px 15px;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .card-form__submit {
+        background-color: #2364D2;
+        box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+        margin-top: 20px;
+        color: #FFFFFF;
+        font-size: 22px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    }
 }
