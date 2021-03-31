@@ -51,18 +51,9 @@ body {
             box-shadow: 0 10px 20px 13px rgba(32, 56, 117, 0.35);
             border: none;
         }
-    }
-
-    .card-form__input--select {
-        font-size: 18px;
-        font-weight: 400;
-        color: $primary-colour;
-        border: 1px solid #CED6E0;
-        border-radius: 5px;
-        padding: 5px 30px 5px 15px;
-        margin-bottom: 20px;
-        display: block;
-        width: 100%;
+        &.card-form__input--select {
+            padding: 5px 30px 5px 15px;
+        }
     }
 
     .card-form__submit {
