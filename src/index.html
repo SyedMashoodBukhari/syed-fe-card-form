@@ -11,14 +11,14 @@
     <body>
         <form class="card-form">
             <label for="card-number" class="card-form__label">Card Number</label>
-            <input type="text" class="card-form__input" id="card-number">
+            <input type="number" class="card-form__input" id="card-number" required>
             <label for="card-holder-name" class="card-form__label">Card Holder's Name</label>
-            <input type="text" class="card-form__input" id="card-holder-name">
+            <input type="text" class="card-form__input" id="card-holder-name" required>
             <div class="card-form__columns">
                 <div class="card-form__columns__date">
                     <label for="expiry-month expiry-year" class="card-form__label">Card Number</label>
                     <div class="card-form__columns__date__fields">
-                        <select class="card-form__input card-form__input--select" id="expiry-month">
+                        <select class="card-form__input card-form__input--select" id="expiry-month" required>
                             <option value="" disabled selected>Month</option>
                             <option value="1">01</option>
                             <option value="2">02</option>
@@ -33,7 +33,7 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                        <select class="card-form__input card-form__input--select" id="expiry-year">
+                        <select class="card-form__input card-form__input--select" id="expiry-year" required>
                             <option value="" disabled selected>Year</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="card-form__columns__cvv">
                     <label for="cvv" class="card-form__label">CVV</label>
-                    <input type="text" class="card-form__input" id="cvv">
+                    <input type="number" class="card-form__input" id="cvv" required>
                 </div>
             </div>
             <input class="card-form__submit" type="submit" value="Submit">

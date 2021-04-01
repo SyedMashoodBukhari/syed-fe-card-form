@@ -14,15 +14,31 @@ $primary_colour: #1A3B5D;
     justify-content: $justify;
 }
 
+// Breakpoints for media queries
+$small: 600px;
+
 // Override any defaults for font and box-sizing
 * {
     font-family: $font-stack;
     box-sizing: border-box;
 }
 
+// Hide arrows on number input fields
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
 body {
     background: #DDEEFC;
     position: relative;
+    margin: 0;
+    padding: 35px;
+
+    @media all and (max-width: $small) {
+        padding: 25px;
+    }
 }
 
 .card-form {
@@ -35,6 +51,12 @@ body {
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+
+    @media all and (max-width: $small) {
+        padding: 25px;
+        min-width: 0;
+        width: 100%;
+    }
 
     .card-form__label {
         font-size: 14px;
@@ -67,8 +89,16 @@ body {
     .card-form__columns {
         @include flex(row, nowrap, flex-start, space-between);
 
+        @media all and (max-width: $small) {
+            flex-direction: column;
+        }
+
         .card-form__columns__date {
             width: 60%;
+
+            @media all and (max-width: $small) {
+                width: 100%;
+            }
 
             .card-form__columns__date__fields {
                 width: 100%;
@@ -91,7 +121,11 @@ body {
         }
 
         .card-form__columns__cvv {
-            width: 33%
+            width: 33%;
+
+            @media all and (max-width: $small) {
+                width: 100%;
+            }
         }
     }
 
@@ -107,5 +141,9 @@ body {
         border: none;
         border-radius: 5px;
         padding: 5px 15px;
+
+        @media all and (max-width: $small) {
+            margin-top: 10px;
+        }
     }
 }
