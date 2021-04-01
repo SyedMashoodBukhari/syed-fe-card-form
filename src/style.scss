@@ -62,9 +62,6 @@ body {
             box-shadow: 0 10px 20px -13px rgba(32, 56, 117, 0.35);
             outline: 0;
         }
-        &.card-form__input--select {
-            padding: 5px 30px 5px 15px;
-        }
     }
 
     .card-form__columns {
@@ -79,7 +76,16 @@ body {
                 @include flex(row, nowrap, flex-start, space-between);
 
                 .card-form__input--select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    position: relative;
                     width: 48%;
+                    padding: 5px 30px 5px 15px;
+                    background-image: url('keyboard_arrow_down-black-18dp.svg');
+                    background-repeat: no-repeat;
+                    background-position-x: calc(100% - 5px);
+                    background-position-y: 50%;
                 }
             }
         }
@@ -100,5 +106,6 @@ body {
         text-align: center;
         border: none;
         border-radius: 5px;
+        padding: 5px 15px;
     }
 }
