@@ -48,7 +48,7 @@
                 </div>
                 <div class="card-form__columns__cvv">
                     <label for="cvv" class="card-form__label">CVV</label>
-                    <input type="number" class="card-form__input" id="cvv" required>
+                    <input type="number" class="card-form__input" id="cvv" onkeyup="validateCVVEntry()" required>
                 </div>
             </div>
             <input class="card-form__submit" type="submit" value="Submit">
