@@ -5,10 +5,21 @@
 $font_stack: 'Source Sans Pro', sans-serif;
 $primary_colour: #1A3B5D;
 
+// Define flex mixin
+@mixin flex($direction, $wrap, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-content: $align;
+    justify-content: $justify;
+}
+
+// Override any defaults for font and box-sizing
 * {
     font-family: $font-stack;
     box-sizing: border-box;
 }
+
 body {
     background: #DDEEFC;
     position: relative;
@@ -48,11 +59,33 @@ body {
             border: 1px solid #3D9CFF;
         }
         &:focus {
-            box-shadow: 0 10px 20px 13px rgba(32, 56, 117, 0.35);
-            border: none;
+            box-shadow: 0 10px 20px -13px rgba(32, 56, 117, 0.35);
+            outline: 0;
         }
         &.card-form__input--select {
             padding: 5px 30px 5px 15px;
+        }
+    }
+
+    .card-form__columns {
+        @include flex(row, nowrap, flex-start, space-between);
+
+        .card-form__columns__date {
+            width: 60%;
+
+            .card-form__columns__date__fields {
+                width: 100%;
+                margin: 0;
+                @include flex(row, nowrap, flex-start, space-between);
+
+                .card-form__input--select {
+                    width: 48%;
+                }
+            }
+        }
+
+        .card-form__columns__cvv {
+            width: 33%
         }
     }
 

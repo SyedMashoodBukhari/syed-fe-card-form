@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.min.css" />
+        <link href="style.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <form class="card-form">
@@ -12,31 +13,33 @@
             <div class="card-form__columns">
                 <div class="card-form__columns__date">
                     <label for="expiry-month expiry-year" class="card-form__label">Card Number</label>
-                    <select class="card-form__input card-form__input--select" id="expiry-month">
-                        <option value="" disabled selected>Month</option>
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                        <option value="3">03</option>
-                        <option value="4">04</option>
-                        <option value="5">05</option>
-                        <option value="6">06</option>
-                        <option value="7">07</option>
-                        <option value="8">08</option>
-                        <option value="9">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                    <select class="card-form__input card-form__input--select" id="expiry-year">
-                        <option value="" disabled selected>Year</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                    </select>
+                    <div class="card-form__columns__date__fields">
+                        <select class="card-form__input card-form__input--select" id="expiry-month">
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="card-form__input card-form__input--select" id="expiry-year">
+                            <option value="" disabled selected>Year</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-form__columns__cvv">
                     <label for="cvv" class="card-form__label">CVV</label>
