@@ -134,6 +134,13 @@ body {
         }
     }
 
+    .card-form__error {
+        color: #F00;
+        text-align: center;
+        margin: 0;
+        //display: none;
+    }
+
     .card-form__submit {
         background-color: #2364D2;
         box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
@@ -147,6 +154,9 @@ body {
         border-radius: 5px;
         padding: 5px 15px;
 
+        &:disabled {
+            opacity: 0.5;
+        }
         @media all and (max-width: $small) {
             margin-top: 10px;
         }
